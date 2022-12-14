@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: #e3cc48;
+  font-weight: 500;
+  text-align: center;
+  background-color: #951010;
+  opacity: 0.7;
+  padding: 10px;
+}

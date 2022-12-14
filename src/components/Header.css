@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 5vh;
+  background: #fff;
+  color: #a98467;
+}
+.nav__brand {
+  text-transform: uppercase;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  z-index: 10;
+}
+.nav__toggler {
+  display: none;
+}
+.nav__toggler div {
+  width: 1.4rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #a98467;
+  transition: 0.3s ease-in;
+  z-index: 11;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 3vh;
+    right: 0;
+    height: 40vh;
+    width: 50vw;
+    background: #fff;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+    padding-bottom: 50px;
+  }
+}
+/* Active Class */
+.nav__active {
+  transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+  z-index: 11;
+}
+.toggle .line2 {
+  opacity: 0;
+  z-index: 11;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
+  z-index: 11;
+}
